@@ -1,0 +1,16 @@
+{
+  "name": "drinking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "drinking.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-cron": "^2.0.3",
+    "silly-datetime": "^0.1.2",
+    "unirest": "^0.6.0"
+  }
+}
