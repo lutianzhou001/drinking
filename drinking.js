@@ -4,7 +4,7 @@ var req = unirest("POST", "https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/sen
 var cron = require('node-cron');
 
 
-cron.schedule('* 7,9,11,13,15,17,19,20 * * *', () => {
+cron.schedule('10 7,9,11,13,15,17,19,20 * * *', () => {
 req.headers({
 	"x-rapidapi-host": "rapidprod-sendgrid-v1.p.rapidapi.com",
 	"x-rapidapi-key": "ae2ad23146msh06a431323e86027p11a924jsn731ce3762748",
@@ -16,6 +16,7 @@ req.type("json");
 
 var time=sd.format(new Date(), 'YYYY-MM-DD HH:mm:ss');
 var value  = "亲爱的：现在时间 "+time+"，请喝水"
+console.log(time)
 console.log(value)
 req.send({
 	"personalizations": [
